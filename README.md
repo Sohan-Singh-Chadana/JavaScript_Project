@@ -75,16 +75,16 @@ https://youtube-projectmini.netlify.app/
 
 https://sohan-site-2.netlify.app
 
-![YoutubeThemb](/Project%20Theme%20Image/My-Website.png)
+![Simple Portfolio](/Project%20Theme%20Image/My-Website.png)
 
 #### 14. Simple T-Shirt-Design Website for Practic
 
 https://tshir-project33.netlify.app
 
-![YoutubeThemb](/Project%20Theme%20Image/T-shirt-Design.png)
+![T-shirt](/Project%20Theme%20Image/T-shirt-Design.png)
 
 #### 15. Simple Band Website for Practic
 
 https://sohan-site-3.netlify.app/
 
-![YoutubeThemb](/Project%20Theme%20Image/Simple-Band-Web-Design.png)
+![Simple Band](/Project%20Theme%20Image/Simple-Band-Web-Design.png)
