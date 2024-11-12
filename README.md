@@ -28,7 +28,7 @@ https://numberguessgameminiproject.netlify.app
 
 https://stringtransformersminiproject.netlify.app
 
-### 7.Meme Generator mini-Project
+#### 7.Meme Generator mini-Project
 
 https://jsminimemegenerator.netlify.app
 
@@ -40,6 +40,6 @@ https://financetrackerminiproject.netlify.app
 
 https://currencyconvertermini.netlify.app
 
-#### 9. Accordion Menu mini-Project
+#### 10. Accordion Menu mini-Project
 
 https://accordion-menu-jsproject.netlify.app
