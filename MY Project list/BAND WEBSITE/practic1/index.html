@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Band Web-Design</title>
+    <link rel="shortcut icon" href="image/11.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .search-input {
+            padding: 10px 0;
+            border: 0;
+            outline: 0;
+            color: #040404;
+            background-color: rgb(248, 243, 243);
+            width: 0;
+            overflow: hidden;
+            transition: all 0.1s linear;
+        }
+        
+        .hide-search-bar {
+            color: black !important;
+            font-size: var(--fontsize);
+            padding: 0px 0px;
+            display: flex;
+            gap: 0 3px;
+            align-items: center;
+            transition: all 0.1s linear;
+        }
+        /* .hide-search-bar:hover .search-input{
+      width: 200px;
+      padding: 10px;
+    } */
+        
+        .nav-bar .search-icon a {
+            color: rgb(253, 251, 251);
+            font-size: var(--fontsize);
+            padding: 15px 20px;
+            transition: all 0.1s linear;
+        }
+        
+        .nav-bar .search-icon a:hover {
+            background-color: rgba(223, 51, 51, 0.925);
+        }
+        
+        .top {
+            animation: cu;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ------------------------------HEADER-------------------------SECTION ------------START -->
+    <div class="main-content" id="home">
+        <div class="nav-bar">
+            <ul class="nav_list" id="navlist">
+                <li onclick="showNav()"><a href="#">home</a></li>
+                <li onclick="showNav()"><a href="#band">Band</a></li>
+                <li onclick="showNav()"><a href="#tour">Tour</a></li>
+                <li onclick="showNav()"><a href="#contact">Contact</a></li>
+                <li onclick="dropDown()">
+                    <a href="#">more<i class="fa-sharp fa-solid fa-caret-down"></i></a>
+                    <div class="drop-down">
+                        <ul>
+                            <li>Merchandise</li>
+                            <li>Extras</li>
+                            <li>Media</li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            <div class="search-icon hide-search-bar">
+                <input type="search" placeholder="search" class="search-input">
+                <a href="#" onclick="showSearch()"><i class="fa-sharp fa-solid fa-search"></i></a>
+            </div>
+            <div class="bars search-icon">
+                <a href="#" onclick="showNav()"><i class="fa-solid fa-bars fa-magnifying-glass"></i></a>
+            </div>
+        </div>
+
+        <div class="background">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div>
+                            <img src="image/darkk.jpg" alt="">
+                            <div class="text">
+                                <div>
+                                    <h4>new york</h4>
+                                    <p>The atmosphere in New York is lorem ipsum.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/dark.jpg" alt="">
+                        <div class="text">
+                            <div>
+                                <h4>Chicago</h4>
+                                <p>Thank you, Chicago - A night we won't forget.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/dark1.jpg" alt="">
+                        <div class="text">
+                            <div>
+                                <h4>Los Angeles</h4>
+                                <p> We had the best time playing at Venice Beach!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="image/dark4.jpg" alt="" class="rightside">
+                        <div class="text">
+                            <div>
+                                <h4>new york</h4>
+                                <p>The atmosphere in New York is lorem ipsum.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div class="swiper2">
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="small-nav-bar">
+        <a href="#band" class="w3-bar-item w3-button w3-padding-large">BAND</a>
+        <a href="#tour" class="w3-bar-item w3-button w3-padding-large">TOUR</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">MERCH</a>
+    </div>
+
+    <!-- ------------------------------HEADER-------------------------SECTION ------------END -->
+
+    <!-- ------------------------------THE BAND SECTION ------------START -->
+    <main id="band">
+        <div class="main-content-2">
+            <h2>THE BAND</h2>
+            <h3>We love music</h3>
+            <p>
+                We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <div class="image-containt">
+                <div class="images">
+                    <p class="phra">name</p>
+                    <img src="image/camera-man.jpg" alt="camera-man" />
+                </div>
+                <div class="images">
+                    <p class="phra">name</p>
+                    <img src="image/camera-man.jpg" alt="camera-man" />
+                </div>
+                <div class="images">
+                    <p class="phra">name</p>
+                    <img src="image/camera-man.jpg" alt="camera-man" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- ------------------------------THE BAND SECTION ------------END -->
+
+    <!-- THE TOUR SECTION -->
+
+    <div class="main-content-3" id="tour">
+        <div class="containar-3">
+            <h2>TOUR DATES</h2>
+            <p>Remember to book your tickets!</p>
+            <ul>
+                <li class="span1">September <span class="span-text">Sold out</span></li>
+                <li class="span1">October <span class="span-text">Sold out</span></li>
+                <li class="span1 spanAlag">November<span class="three"> 3</span></li>
+            </ul>
+            <div class="img-contant">
+                <div class="contnair-div">
+                    <img src="image/newyork.jpg" alt="" />
+                    <div class="contnair-down">
+                        <p><b>New Your</b></p>
+                        <p class="opacity-text">Fri 27 Nov 2016</p>
+                        <p class="pahra-1">Praesent tincidunt sed tellus ut rutrum sed vitae justo. </p>
+                        <button onclick="showModal()">Buy Tickets</button>
+                    </div>
+                </div>
+
+                <div class="contnair-div">
+                    <img src="image/paris.jpg" alt="" />
+                    <div class="contnair-down">
+                        <p><b>Paris</b></p>
+                        <p class="opacity-text">Sat 28 Nov 2016</p>
+                        <p class="pahra-1">
+                            Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                        </p>
+                        <button onclick="showModal()">Buy Tickets</button>
+                    </div>
+                </div>
+                <div class="contnair-div">
+                    <img src="image/sanfran.jpg" alt="" />
+                    <div class="contnair-down">
+                        <p><b>San Francisco</b></p>
+                        <p class="opacity-text">Sat 29 Nov 2016</p>
+                        <p class="pahra-1">
+                            Praesent tincidunt sed tellus ut rutrum sed vitae justo.
+                        </p>
+                        <button onclick="showModal()" class="buyticket">Buy Tickets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== Ticket Modal section --- Start ============ -->
+    <div class="overlay" onclick="closeModal()"></div>
+    <div class="ticketModal">
+        <div class="modalcontant">
+            <header>
+                <span onclick="closeModal()" class="closebtn"><i class="fa fa-times" aria-hidden="true"></i></span>
+                <h2><i class="fa fa-suitcase" aria-hidden="true"></i>Tickets</h2>
+            </header>
+            <div class="modalContainer">
+                <form action="">
+                    <p><label><i class="fa fa-shopping-cart" aria-hidden="true"></i>Tickets, $15 per person</label></p>
+                    <input type="text" placeholder="how many?" required>
+                    <p><label><i class="fa fa-user" aria-hidden="true"></i>Send to </label></p>
+                    <input type="text" placeholder="Enter email" required>
+                    <button class="Chekbtn" type="submit">PAY<i class="fa fa-check" aria-hidden="true"></i></button>
+                    <button class="closebtn" onclick="closeModal()">CLOSE<i class="fa fa-remove" aria-hidden="true"></i></button>
+                    <p class="right">Need <a href="" class="bluetex">help?</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ====== Contact section --- Start ============ -->
+    <div class="main-content-4" id="contact">
+        <div class="containar-4">
+            <h2>CONTACT</h2>
+            <p>Fan? Drop a note!</p>
+            <div class="row">
+                <div class="col">
+                    <p><i class="fa-sharp fa-solid fa-location-dot"></i>fa-envelope</p>
+                    <p><i class="fa-sharp fa-solid fa-phone"></i>Phone: +00 151515</p>
+                    <p><i class="fa-sharp fa-solid fa-envelope"></i>Email: mail@mail.com</p>
+                </div>
+                <div class="col-2">
+                    <form action="">
+                        <div class="row-inner">
+                            <div class="half">
+                                <input type="text" placeholder="Name" required>
+                            </div>
+                            <div class="half">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                        </div>
+                        <textarea name="Message" id="" cols="30" rows="1" placeholder="Message"></textarea>
+                        <!-- <input type="text" placeholder="Message" required> -->
+                        <button type="submit">SEND</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ image section ======== -->
+    <div class="map-img">
+        <img src="image/map.jpg" alt="map">
+    </div>
+
+    <!-- =============== Footer -- Sectioin ================= -->
+    <footer>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-snapchat"></i>
+        <i class="fa-brands fa-pinterest"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        <p>Made By Sohan Powered by <a href="#">w3.css</a></p>
+    </footer>
+
+    <a href="#home" class="top"><img src="image/up.png"></a>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+
+    // <!-- ====== Ticket Modal section --- Start ============ -->
+
+    function showModal() {
+        document.querySelector('.overlay').classList.add('showoverlay');
+        document.querySelector('.ticketModal').classList.add('showticketModal');
+    }
+
+    function closeModal() {
+        document.querySelector('.overlay').classList.remove('showoverlay');
+        document.querySelector('.ticketModal').classList.remove('showticketModal');
+    }
+    var buybtn = document.querySelector('.buyticket');
+    buybtn.addEventListener("click", showModal);
+
+    var closebtn = document.querySelector(".closebtn");
+    closebtn.addEventListener("click", closeModal);
+
+    // NAV BAR CLICK
+
+    let navList = document.getElementById('navlist')
+
+    function showNav() {
+
+        if (navList.style.top == '-1000%') {
+            navList.style.top = '100%'
+        } else {
+            navList.style.top = '-1000%'
+        }
+
+        // document.querySelector('.nav_list').classList.add('showNavbar');
+    }
+
+    // SEARCH ICONE HIDE
+
+    let searcInput = document.querySelector('.search-input');
+
+    function showSearch() {
+        // document.querySelector('.search-input').style.width = '200px';
+        // document.querySelector('.search-input').style.padding = '10px';
+        if (searcInput.style.width != '200px') {
+            searcInput.style.width = '200px'
+            searcInput.style.padding = '15px'
+            console.log(searcInput.style.width != "200px");
+        } else {
+            searcInput.style.width = '0'
+            searcInput.style.padding = '10px 0px'
+        }
+    }
+
+    // MORE CONTANT CLICK
+
+    let DropDown = document.querySelector('.drop-down');
+
+    // function dropDown() {
+    //   // document.querySelector('.drop-down').classList.add('.showdrop-down');
+    //   if(DropDown.style.display == 'none'){
+    //     DropDown.style.display = 'block'
+    //     DropDown.style.position = 'relative';
+
+    //   }
+    //   else{
+    //     DropDown.style.display = 'none'
+    //     DropDown.style.position = 'relative';
+
+    //   }
+    // }
+</script>
+
+</html>

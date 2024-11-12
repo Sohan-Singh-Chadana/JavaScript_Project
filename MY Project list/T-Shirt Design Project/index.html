@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-Shirt Design</title>
+    <link rel="shortcut icon" href="images/logo1.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+@media (max-width: 1400px){
+.container {
+    padding: 2rem 3.5rem;
+}
+.container_one {
+    padding: 2rem 3.5rem;
+}
+
+}
+@media (max-width: 993px) {
+.menu_icone{
+    display: block;
+}
+
+#navflex{
+   /* z-index: 999; */
+}
+.container .nav_item{
+    /* display: none; */
+    background-color: #f9f9f9;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: -100%;
+   z-index: 999;
+    flex-direction: column;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.container .nav_item .nav_list {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.container .nav_item .btn{
+    margin-bottom: 1rem;
+}
+
+/* hero section */
+.container .grenn-bg .middle-contant .text-wrap h1 {
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+.container .grenn-bg .middle-contant .text-wrap .larg-text {
+  font-size: 6rem;
+}
+
+/* OUR ===== FEATURES ===== */
+.row .flex-div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+/* ======= HOW ======== IT ========== WORKS ======= SECTION ========= START */
+.howit-section .contant {
+    flex-direction: column;
+    gap: 30px 0px;
+}
+/* -- ======= ABOUT ======= SECTION ========= START */
+.about_section .flex_div {
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.flex_div .lflex {
+    width: 100%;
+}
+.lflex h2 { 
+    display: block;
+    padding: 0 10px;
+    margin-bottom: 2rem;
+}
+.flex_div .rflex {
+    width: 100%;
+}
+.rflex p {
+ margin-bottom: 2rem;
+}
+
+/* ======= PROFESSIONAL TOOLS ======= SECTION ========= START */
+.flex_divone {
+  display: grid;
+  /* place-items: center; */
+  row-gap: 30px;
+  column-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+}
+.professional_section .flex_divone .flex_contant {
+  width: 100%;
+}
+/* .professional_section .flex_divone .flex_contant:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+} */
+
+
+/* ======= OUR SHOP ======= SECTION ========= START */
+.flex_item .item_text {
+  width: 100%;
+}
+.item_text h5 {
+  font-size: 1.8rem;
+}
+
+/* ======= OUR SHOP 2 ======= SECTION ========= START */
+.rflex_container {
+    gap: 0px 0px;
+    align-items: start;
+}
+.t_shir_print_one {
+  width: 30%;
+  padding: 0 0;
+}
+
+/*  ======= VIEW IN ACTION  ======= SECTION ========= START */
+
+.image_section img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  border-radius: 3.2rem;
+}
+
+/* MODAL SECTION START */
+.modalwindow iframe {
+  width: 75%;
+  height: 60vh;
+}
+
+/* ======= OUR PARTNER  ======= SECTION ========= START */
+.our_partner_flex {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 30px 0;
+}
+.our_partner_flex .our_partner_card {
+  width: 100%;
+}
+/* .our_partner_flex .our_partner_card:last-child {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+} */
+
+/* ======= CLIENT  ======= SECTION ========= START */
+
+.client_section .client_flex {
+  flex-direction: column;
+  gap: 30px;
+}
+.client_flex .cline_lflex {
+  width: 100%;
+}
+.cline_rflex {
+  width: 100%;
+}
+
+/* ======= CONTACT  ======= SECTION ========= START */
+
+.contact_flex {
+  flex-direction: column;
+  gap: 30px;
+}
+.contact_flex_item {
+  width: 100%;
+}
+
+/* ======= SEND MESSAGE  ======= SECTION ========= START */
+.form_section{
+  justify-content: start;
+  width: 100%;
+  padding: 0 ;
+}
+.form_section .form_contant{
+  width: 100%;
+}
+/* .form_contant .form{
+  padding: 32px 16px;
+} */
+
+}
+
+
+@media (max-width: 900px){
+.t_shir_print_one {
+  width: 70%;
+  padding: 0 15px;
+}
+}
+
+
+@media (max-width: 768px){
+
+.container {
+    padding: 2rem 1.3rem;
+}
+.container_one {
+    padding: 2rem 1.3rem;
+}
+
+.container .nav_bar_logo h2 {
+  font-size: 3rem;
+}
+.menu_icone i{
+  font-size: 3rem;
+}
+
+/* home section start */
+.container .grenn-bg {
+  padding: 1.6rem 1.6rem;
+}
+.container .grenn-bg .middle-contant {
+  padding: 1.2rem 0rem;
+}
+
+.container .grenn-bg .middle-contant .text-wrap h1 {
+  margin: 2rem 0 1rem;
+  letter-spacing: 0;
+}
+.container .grenn-bg .middle-contant .text-wrap .larg-text {
+  font-size: 7.5rem;
+}
+
+/* hero section */
+.container .grenn-bg .middle-contant .text-wrap h1 {
+  font-size: 3rem;
+  margin: 1.5rem 0;
+}
+.container .grenn-bg .middle-contant .text-wrap .larg-text {
+  font-size: 5rem;
+}
+
+
+/* OUR ===== FEATURES ===== */
+.row .section-title {
+ text-align: center;
+}
+.row .flex-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.row .flex-div .card-wrap {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+    text-align: center;
+}
+
+/*  ======= HOW ======== IT ========== WORKS ======= SECTION ========= START   */
+.howit-section .bg-black {
+  padding: 1.2rem ;
+}
+.howit-section .bg-black .head-title h4 {
+  text-align: center;
+}
+.howit-section .card-item-wrapper {
+    padding: 1.6rem;
+}
+.howit-section .card-item-wrapper .item-contant h4 {
+ text-align: center ;
+}
+.howit-section .card-item-wrapper .item-btn {
+  flex-direction: column;
+  gap: 20px;
+}
+.howit-section .card-item-wrapper .item-title h4 {
+  text-align: center;
+}
+.howit-section .card-item-wrapper .item-contant h4 {
+    font-size: 5rem;
+}
+.howit-section .card-item-wrapper .item-title p {
+  font-size: 3rem;
+  text-align: center;
+}
+
+/* ======= PROFESSIONAL TOOLS ======= SECTION ========= START */
+.flex_divone {
+  display: grid;
+  /* row-gap: 30px; */
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  padding: 15px 10px;
+  gap: 20px;
+}
+.professional_section .flex_divone .flex_contant {
+  width: 100%;
+}
+
+.professional_section .professional_text h3 {
+  font-size: 3.5rem;
+  text-align: center;
+}
+
+.wrapper_item .item_contant {
+  text-align: center;
+}
+.item_contant h4 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.item_contant p {
+  justify-content: center;
+  font-size: 1.8rem;
+}
+/* ======= OUR SHOP 2 ======= SECTION ========= START */
+.our_shop_section_one .flex_conterine_one {
+  flex-direction: column;
+}
+.image_container {
+  width: 100%;
+}
+.rflex_container {
+  width: 100%;
+  padding: 1.5rem;
+}
+.rflex_container {
+   gap: 0px 0px;
+   align-items: start;
+   flex-direction: column;
+}
+.t_shir_print_one {
+  width: 100%;
+  padding: 0 15px;
+}   
+.t_shir_print_one button {
+ width: 150px;
+}
+.t_shir_print h2 {
+  font-size: 3rem;
+}
+.t_shir_print h5 {
+ text-align: justify;
+}
+
+
+/* ======= OUR TEAM  ======= SECTION ========= START */
+.our_team_text h2 {
+  text-align: center;
+  font-size: 3.2rem;
+}
+.our_team_text h5 {
+ text-align: center;
+}
+.our_team_section .one{
+padding: 16px;
+}
+.item_contant_one {
+  padding: 1.6rem 1.6rem 1rem 1.6rem;
+}
+
+/*  ======= VIEW IN ACTION  ======= SECTION ========= START */
+.view_text h2 {
+  font-size: 4.5rem;
+}
+.image_section img {
+  height: auto;
+}
+.you_icone a i {
+  font-size: 7rem;
+}
+
+/* MODAL SECTION START */
+.modalwindow iframe {
+  width: 90%;
+  height: 40vh;
+}
+
+/* ======= OUR PARTNER  ======= SECTION ========= START */
+.our_partner_flex {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: auto;
+  gap: 30px 0;
+}
+.our_partner_flex .our_partner_card {
+  padding: 0px;
+}
+
+
+/* ======= CLIENT  ======= SECTION ========= START */
+
+.client_section .client_flex {
+    padding: 1.6rem;
+}
+.client_flex .cline_lflex .cline_text_wrapper {
+  text-align: center !important;
+}
+.cline_text_wrapper button {
+  text-align: center;
+  width: 250px;
+  margin: auto;
+}
+.client_flex .cline_lflex {
+  padding: 0px;
+}
+.cline_rflex {
+  padding: 0px;
+}
+
+/* ======= CONTACT  ======= SECTION ========= START */
+
+.contact_flex_item {
+  padding: 0;
+}
+.contact_title h2 {
+  font-size: 5rem;
+}
+.contact_card_box h4 {
+  font-size: 3.5rem;
+}
+/* ======= SEND MESSAGE  ======= SECTION ========= START */
+
+.form_contant .form{
+  padding: 32px 10px;
+}
+.form_item .hife{
+  flex-direction: column;
+  gap:  20px 0;
+}
+
+}
+@media (max-width: 500px) {
+    /* hero section */
+.container .grenn-bg .middle-contant .text-wrap h1 {
+  font-size: 2.5rem;
+}
+.container .grenn-bg .middle-contant .text-wrap .larg-text {
+  font-size: 4rem;
+}
+
+
+/* <!-- ======= HOW ======== IT ========== WORKS ======= SECTION ========= START  --> */
+
+.howit-section .card-item-wrapper .item-contant h4 {
+  font-size: 4.5rem;
+}
+
+/* -- ======= ABOUT ======= SECTION ========= START */
+
+.lflex h2 { 
+    font-size: 3rem;
+}
+
+.rflex p {
+ margin-bottom: 2rem;
+ font-size: 1.8rem;
+}
+
+/* professional secton */
+.professional_section .professional_text h3 {
+  font-size: 2.8rem;
+}
+/* our shop section */
+.item_text h2 {
+  font-size: 2.8rem;
+}
+
+.t_shir_print_one h1 {
+  font-size: 4rem;
+}
+
+.t_shir_print_one button {
+ width: auto;
+}
+/*  ======= VIEW IN ACTION  ======= SECTION ========= START */
+.you_icone a i {
+  font-size: 6rem;
+}
+/* MODAL SECTION START */
+.modalwindow iframe {
+  width: 90%;
+  height: 30vh;
+}
+/* ======= CONTACT  ======= SECTION ========= START */
+
+.contact_flex_item {
+  padding: 0;
+}
+.contact_title h2 {
+  font-size: 4rem;
+}
+.contact_card_box h4 {
+  font-size: 3rem;
+}
+.howit-section .card-item-wrapper .item-title p {
+  font-size: 2.5rem;
+}
+/* footer section  */
+.footer .footer_div p{
+ font-size: 1.8rem;
+ font-weight: 200;
+}
+}
+</style>
+</head>
+<body>
+    <nav class="nav_bar">
+        <div class="container" id="navflex">
+            <div class="nav_bar_logo">
+                <h2><a href="#">ToolM5</a></h2>
+            </div>
+            <div class="menu_icone" id="open_menu" >
+                <i class="ri-menu-line" onclick="open_menu()" ></i>
+            </div>
+            <div class="nav_item" id="nav_item">
+                <ul class="nav_list">
+                    <li onclick="open_menu()"><a href="#about">About Us</a></li>
+                    <li onclick="open_menu()"><a href="#shop">Services</a></li>
+                    <li onclick="open_menu()"><a href="#contac">Contacts</a></li>
+                </ul>
+                <div class="nav_icon">
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                </div>
+                <div class="btn">
+                    <span><a href="#">Get Started <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a></span>
+                </div>
+            </div>
+           
+        </div>
+    </nav>
+    <!-- HOME ===== SECTION ======= START ====== -->
+    <section class="home-section">
+        <div class="container">
+            <div class="grenn-bg">
+                <div class="middle-contant">
+                    <div class="text-wrap">
+                        <h1>Create your</h1>
+                        <p class="larg-text">T-Shirt Design</p>
+                        <div class="mid-btn">
+                            <button type="button"  class="black-btn">Get Started</button>
+                            <!-- <a href="#" class="black-btn">Get Started</a> -->
+                        </div>
+                        <p class="under_line"><strong>View how it works</strong></p>
+                        <p class="phara">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- HOME ===== SECTION ======= END ====== -->
+
+    <!-- OUR ==== FEATURES ===== SECTION ======= START ====== -->
+    <section class="Features-section">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2>Our Features</h2>
+                </div>
+                <div class="flex-div">
+                    <div class="card-wrap">
+                        <div class="icones">
+                            <span><i class="fa fa-palette fa-rotate-90" ></i></span>
+                        </div>
+                        <div class="card-box">
+                            <h3>Unique Design</h3>
+                            <h4>Jul 13 2025</h4>
+                        </div>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="icones">
+                            <span><i class="fa fa-regular fa-layer-group"></i></span>
+                        </div>
+                        <div class="card-box">
+                            <h3>Quality Materials</h3>
+                            <h4>Jul 15 2025</h4>
+                        </div>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="icones">
+                            <span><i class="fa fa-regular fa-shirt"></i></i></span>
+                        </div>
+                        <div class="card-box">
+                            <h3>High Print Quality</h3>
+                            <h4>Jul 23 2025</h4>
+                        </div>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="icones">
+                            <span><i class="fa fa-regular fa-face-smile"></i></span>
+                        </div>
+                        <div class="card-box">
+                            <h3>Good Reviews</h3>
+                            <h4>Jul 27 2025</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- OUR ==== FEATURES ===== SECTION ======= END ====== -->
+
+    <!-- ======= HOW ======== IT ========== WORKS ======= SECTION ========= START  -->
+    <section class="howit-section">
+        <div class="container">
+            <div class="bg-black">
+                <div class="head-title">
+                    <h4>How it works?</h4>
+                </div>
+                <div class="contant">
+                    <div class="card-item-wrapper">
+                        <div class="item-img">
+                            <img src="images/mbr1.jpeg" alt="mbr">
+                        </div>
+                        <div class="item-contant">
+                            <h4>Unique T-Shirt</h4>
+                        </div>
+                        <div class="item-btn">
+                            <a href="#" class="btn1 btn">Buy for $59</a>
+                            <a href="#" class="btn2 btn">View all<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                
+                    <div class="card-item-wrapper">
+                        <div class="item-title">
+                            <h4>Unique T-Shirt Design</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam id orci nec lectus lacinia tempus. Praesent nec quam mollis turpis eleifend consequat.
+                            <br>
+                            <br>    
+                            Phasellus euismod maximus ipsum vehicula vehicula. Mauris posuere risus nec purus dapibus semper sed id ligula. Integer massa lorem, fringilla vel eros.</p>
+                        </div>
+                        <div class="item-btn">
+                            <a href="#" class="btn1 btn">Subscribe $79/q</a>
+                            <a href="#" class="btn2 btn">More Info<i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= HOW ======== IT ========== WORKS ======= SECTION ========= END  -->
+    <!-- ======= ABOUT ======= SECTION ========= START  -->
+    <section class="about_section" id="about">
+        <div class="container">
+            <div class="flex_div">
+                <div class="lflex">
+                    <h2>About Us</h2>
+                </div>
+                <div class="rflex">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris felis elit, faucibus at tincidunt vel, ultrices vitae mauris. Pellentesque nec ante nisi. Praesent posuere dignissim nibh in finibus. Nunc rutrum nibh pellentesque, viverra dolor quis, sollicitudin libero. Duis non elit feugiat maximus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= ABOUT ======= SECTION ========= END  -->
+    <!-- ======= PROFESSIONAL TOOLS ======= SECTION ========= START  -->
+    <section class="professional_section">
+        <div class="container_one">
+            <div class="professional_text">
+                <h3>Professional Tools</h3>
+            </div>
+            <div class="flex_divone">
+                <div class="flex_contant">
+                    <div class="wrapper_item">
+                        <div class="item_img">
+                            <img src="images/mbr.jpg" alt="">
+                        </div>
+                        <div class="item_contant">
+                            <h4>Quality Materials</h4>
+                            <h5>Lorem ipsum dolor sit amet.</h5>
+                            <p><a href="#">Read More <i class="ri-arrow-right-s-line"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex_contant">
+                    <div class="wrapper_item">
+                        <div class="item_img">
+                            <img src="images/mbr-1.jpg" alt="">
+                        </div>
+                        <div class="item_contant">
+                            <h4>High Print Quality</h4>
+                            <h5>Lorem ipsum dolor sit amet.</h5>
+                            <p><a href="#">Read More <i class="ri-arrow-right-s-line"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex_contant">
+                    <div class="wrapper_item">
+                        <div class="item_img">
+                            <img src="images/mbr1.jpeg" alt="">
+                        </div>
+                        <div class="item_contant">
+                            <h4>Good Reviews</h4>
+                            <h5>Lorem ipsum dolor sit amet.</h5>
+                            <p><a href="#">Read More <i class="ri-arrow-right-s-line"></i></a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= PROFESSIONAL TOOLS ======= SECTION ========= END  -->
+    <!-- ======= OUR SHOP ======= SECTION ========= START  -->
+    <section class="our_shop_section" id="shop">
+        <div class="container_one">
+            <div class="flex_item">
+                <div class="item_text">
+                    <h2>Our Shop</h2>
+                    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fringilla suscipit orci eu pellentesque. Nullam consectetur dolor vel ex ullamcorper, non viverra neque aliquet.</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= OUR SHOP ======= SECTION ========= END  -->
+    <!-- ======= OUR SHOP 2 ======= SECTION ========= START  -->
+    <section class="our_shop_section_one">
+        <div class="container_one">
+           <div class="card_one">
+                <div class="flex_conterine_one">
+                    <div class="image_container">
+                        <img src="images/mbr-1.jpg" alt="mbr-1">
+                    </div>
+                    <div class="rflex_container">
+                        <div class="t_shir_print">
+                            <h2>T-shirt with Print</h2>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies metus et nibh gravida, eu imperdiet ante egestas. Duis ornare lobortis ante, eget eleifend sapien dictum ut. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</h5>
+                        </div>
+                        <div class="t_shir_print_one">
+                            <h1>$29</h1>
+                            <button><a href="#">Buy Now<i class="ri-arrow-right-circle-fill"></i></a></button>
+                        </div>
+                    </div>
+                </div>
+           </div>
+           <div class="card_one">
+                <div class="flex_conterine_one">
+                    <div class="image_container">
+                        <img src="images/mbr1.jpeg" alt="mbr-1">
+                    </div>
+                    <div class="rflex_container">
+                        <div class="t_shir_print">
+                            <h2>T-shirt with Slogan</h2>
+                            <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ultricies metus et nibh gravida, eu imperdiet ante egestas. Duis ornare lobortis ante, eget eleifend sapien dictum ut. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.</h5>
+                        </div>
+                        <div class="t_shir_print_one">
+                            <h1>$49</h1>
+                            <button><a href="#">Buy Now<i class="ri-arrow-right-circle-fill"></i></a></button>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+    <!-- ======= OUR SHOP 2 ======= SECTION ========= END  -->
+    <!-- ======= OUR TEAM  ======= SECTION ========= START  -->
+    <section class="our_team_section">
+        <div class="container_one">
+            <div class="our_team_text">
+                <h2>Our Team</h2>
+                <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h5>
+            </div>
+            <div class="flex_divone one">
+                <div class="flex_contant  ">
+                    <div class="wrapper_item " id="wrapper_item">
+                        <div class="item_img height">
+                            <img src="images/team1.jpg" alt="">
+                        </div>
+                        <div class="item_contant_one">
+                            <h3>Jessica Swift</h3>
+                            <h4>Manager</h4>
+                            <h5>Lorem ipsum dolor sit amet, consectet adipiscing elit.</h5>
+                            <button>
+                                <a href="#" >View Profile <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex_contant">
+                    <div class="wrapper_item " id="wrapper_item">
+                        <div class="item_img height">
+                            <img src="images/team2.jpg" alt="">
+                        </div>
+                        <div class="item_contant_one">
+                            <h3>Jessica Swift</h3>
+                            <h4>Designer</h4>
+                            <h5>Lorem ipsum dolor sit amet, consectet adipiscing elit.</h5>
+                            <button>
+                                <a href="#">View Profile <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex_contant">
+                    <div class="wrapper_item " id="wrapper_item"> 
+                        <div class="item_img height">
+                            <img src="images/team3.jpg" alt="">
+                        </div>
+                        <div class="item_contant_one">
+                            <h3>Jessica Swift</h3>
+                            <h4>Developer</h4>
+                            <h5>Lorem ipsum dolor sit amet, consectet adipiscing elit.</h5>
+                            <button>
+                                <a href="#">View Profile <i class="fa fa-chevron-circle-right" aria-hidden="true"></i></a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= OUR TEAM  ======= SECTION ========= END  -->
+    <!-- ======= VIEW IN ACTION  ======= SECTION ========= START  -->
+    <section class="view_section">
+        <div class="container_one">
+            <div class="view_text">
+                <h2>View in Action</h2>
+            </div>
+            <div class="video_section" >
+                <div class="image_section" >
+                    <img src="images/mbr.jpg" alt="">
+                </div>
+                <div class="you_icone" onclick="shoModal()">
+                    <a href="#"><i class="ri-youtube-fill" ></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= VIEW IN ACTION  ======= SECTION ========= END  -->
+    <!-- ======= MODAL  ======= SECTION ========= START  -->
+    <div class="overlay" id="overlay" ></div>
+    <div class="modalwindow" id="modalwindow"> 
+            <iframe width="100%" height="100%" frameborder="0" allowfullscreen="1" src="https://youtube.com/embed/PivzLLqDZac?rel=0&amp;enablejsapi=1" __idm_id__="4857857"></iframe>  
+            <p onclick="closeModal()" class="close"><i class="ri-close-circle-line" ></i></p>
+    </div>
+    <!-- ======= MODAL  ======= SECTION ========= END  -->
+    <!-- ======= OUR PARTNER  ======= SECTION ========= START  -->
+    <section class="our_partner_section">
+        <div class="container_one">
+            <div class="our_partner_flex">
+                <div class="our_partner_card">
+                    <div class="partner_card_wrapper">
+                        <div class="partner_img">
+                            <img src="images/1.png" alt="1.png">
+                        </div>
+                        <div class="our_partner_info">
+                            <h4>Our partner</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fringilla suscipit.</p>
+                            <button><a href="#">Learn More</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="our_partner_card">
+                    <div class="partner_card_wrapper">
+                        <div class="partner_img">
+                            <img src="images/2.png" alt="2.png">
+                        </div>
+                        <div class="our_partner_info">
+                            <h4>Our partner</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fringilla suscipit.</p>
+                            <button><a href="#">Learn More</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="our_partner_card">
+                    <div class="partner_card_wrapper">
+                        <div class="partner_img">
+                            <img src="images/3.png" alt="3.png">
+                        </div>
+                        <div class="our_partner_info">
+                            <h4>Our partner</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fringilla suscipit.</p>
+                            <button><a href="#">Learn More</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= OUR PARTNER  ======= SECTION ========= END  -->
+    <!-- ======= CLIENT  ======= SECTION ========= START  -->
+    <section class="client_section">
+        <div class="container_one">
+            <div class="client_flex">
+                <div class="cline_lflex">
+                    <div class="cline_text_wrapper">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eu accumsan diam, elementum maximus arcu. Lobortise est ut blandit facilisis, est quam dictum dolor, sed mollis augue. In elementum maximus tempus. Suspendisse augue eget massa vestibulum hendrerit purus."</p>
+                        <h2><strong>Steven Jason</strong> <br> Client</h2>
+                        <button><a href="#">Read Full Review<i class="ri-arrow-right-circle-fill"></i></a></button>
+                    </div>
+                </div>
+                <div class="cline_rflex">
+                    <img src="images/team3.jpg" alt="team3">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= CLIENT  ======= SECTION ========= END  -->
+    <!-- ======= CONTACT  ======= SECTION ========= START  -->
+    <section class="contact_section" id="contac">
+        <div class="container_one">
+            <div class="contact_title">
+                <h2>Contacts</h2>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+            </div>
+            <div class="contact_flex">
+                <div class="contact_flex_item">
+                    <div class="contact_card">
+                        <div class="contact_card_box">
+                            <div class="contact_img_wrapper">
+                                <p><i class="ri-mail-line"></i></p>
+                            </div>
+                            <h4>Email</h4>
+                            <p>We will reply as soon as possible</p>
+                            <h5><a href="#">Send us an email</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact_flex_item">
+                    <div class="contact_card">
+                        <div class="contact_card_box">
+                            <div class="contact_img_wrapper">
+                                <p><i class="ri-smartphone-line"></i></p>
+                            </div>
+                            <h4>Phone</h4>
+                            <p>Mon - Fri 09:00 - 18:00</p>
+                            <h5><a href="#">Call (800) 123 45 67</a></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= CONTACT  ======= SECTION ========= END  -->
+    <!-- ======= SEND MESSAGE  ======= SECTION ========= START  -->
+    <section class="send_message_section">
+        <div class="container_one">
+            <div class="send_text">
+                <h2>Send Message</h2>
+            </div>
+            <div class="form_section" id="form">
+                <div class="form_contant">
+                    <!-- Formbuilder Form -->
+                    <form action="index.html" method="get" class="form">
+                        <div class="modal_two " >
+                            <div class="modal_text" id="modaltext">
+                                Thanks for filling <br> out  <br> the form!
+                            </div>
+                        </div>
+                        <div class="form_item">
+                            <div class="form_input hife">
+                                <input type="text" placeholder="Name" name="name">
+                                <input type="email" placeholder="E-mail" name="email">
+                            </div>
+                            <div class="form_input">
+                                <input type="url" placeholder="Your Site" name="url">
+                            </div>
+                            <div class="form_input">
+                                <textarea name="textarea" id="" cols="10" rows="5" placeholder="Message"></textarea>
+                            </div>
+                            <div class="send_btn" >
+                                <!-- <a href="#form" class="sendbtn" onclick="openmenu()">Send Message</a> -->
+                                <button type="submit" class="sendbtn" onclick="openmenu()">Send Message</button>
+                                <!-- <input type="submit" class="sendbtn" onclick="openmenu()" value="Send Message"> -->
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Formbuilder Form -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= SEND MESSAGE  ======= SECTION ========= END  -->
+    <!-- ======= MAP   ======= SECTION ========= START  -->
+    <section class="map_section">
+        <div class="mapgoogle">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.016421011883!2d72.56416877506709!3d23.02316927917333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e851bb8af3b8d%3A0x2e2c880f89a05761!2sShree%20bherunath%20tea%20stall!5e0!3m2!1sen!2sin!4v1688758565505!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+    <!-- ======= MAP   ======= SECTION ========= END  -->
+    <!-- ======= FOOTER   ======= SECTION ========= START  -->
+    <section class="footer">
+        <div class="container_one">
+            <div class="footer_div">
+                <div class="footer_text">
+                    <p> &copy;   Copyright 2025 Mobirise - All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= FOOTER   ======= SECTION ========= END  -->
+    
+
+
+
+</body>
+<script>
+     function shoModal(){
+        document.querySelector('.overlay').classList.add('showoverlay');
+        document.querySelector('.modalwindow').classList.add('showModalwindow');
+    }
+    function closeModal(){
+        document.querySelector('.overlay').classList.remove('showoverlay');
+        document.querySelector('.modalwindow').classList.remove('showModalwindow');
+    }
+
+    // form section modal
+    let modaltext = document.getElementById("modaltext");
+
+    function openmenu(){
+        modaltext.classList.add("showmodaltext");
+    }
+    
+    // small screen menu
+    let menubar = document.getElementById("nav_item");
+
+    function open_menu(){
+        if (menubar.style.top == '-100%') {
+            menubar.style.top = '10%'
+
+        } else {
+            menubar.style.top = '-100%'
+        }
+        // if (menubar.style.opacity == '0') {
+        //     menubar.style.opacity = '1'
+
+        // } else {
+        //     menubar.style.opacity = '0'
+        // }
+        
+    }
+   
+</script>
+<script src="script.js"></script>
+</html>
