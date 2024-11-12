@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #112028;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  padding: 20px;
+}
+
+.random-color-generator-container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hex_color_container,
+.rgb_color_container {
+  min-height: calc(100vh - 40px);
+  flex: 1;
+}
+
+.hex_color_container button {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: rgb(230, 246, 127);
+}
+
+.rgb_color_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hex_color_container {
+  background-color: rgb(28, 42, 28);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hex_color_value,
+.rgb_color_value {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.rgb_color_container {
+  background-color: rgb(28, 48, 38);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rgb_color_container button {
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: rgb(241, 67, 160);
+  color: white;
+}

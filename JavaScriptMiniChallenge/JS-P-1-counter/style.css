@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Neuton:200,300,regular,italic,700,800);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Neuton, sans-serif;
+    background-color: rgb(220, 216, 216);
+    color: #171717;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.3);
+    height: 80px;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.counter-value {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.counter-controls button {
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: 0;
+    background-color: lightcoral;
+    color: white;
+    width: 60px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.counter-controls .btn {
+    width: 150px;
+}
+
+.change {
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+
+.change label {
+    font-size: 1.5rem;
+    color: darkslategrey;
+    letter-spacing: 1px;
+}
+
+.change input {
+    font-size: 1.5rem;
+    width: 100px;
+    margin: 1rem 2rem;
+    vertical-align: middle;
+    outline: 0;
+    border: 0;
+    height: 40px;
+    color: darkslategray;
+}

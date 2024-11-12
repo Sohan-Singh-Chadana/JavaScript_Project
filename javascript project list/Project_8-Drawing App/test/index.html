@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing App with Move and Resize Functionality</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+            cursor: grab;
+            /* Indicate panning is possible */
+        }
+        
+        canvas:active {
+            cursor: grabbing;
+        }
+        /* Style for resize handles */
+        
+        .resize-handle {
+            width: 8px;
+            height: 8px;
+            background: red;
+            border: 1px solid black;
+            position: absolute;
+            pointer-events: none;
+            /* Let mouse events pass through */
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="drawingCanvas" width="800" height="600"></canvas>
+
+    <script>
+        const canvas = document.getElementById('drawingCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Variables for object movement and resizing
+        let shapes = [{
+            x: 150,
+            y: 100,
+            width: 150,
+            height: 100,
+            isDragging: false,
+            isResizing: false,
+            resizeHandle: null // To keep track of which handle is being dragged
+        }];
+        let selectedShape = null;
+
+        // Variables for panning
+        let isPanning = false;
+        let startX = 0,
+            startY = 0;
+        let panOffsetX = 0,
+            panOffsetY = 0;
+
+        // Resize handle size
+        const HANDLE_SIZE = 8;
+
+        // Event listeners
+        canvas.addEventListener('mousedown', onMouseDown);
+        canvas.addEventListener('mousemove', onMouseMove);
+        canvas.addEventListener('mouseup', onMouseUp);
+        canvas.addEventListener('mouseleave', onMouseUp); // Handle mouse leaving the canvas
+
+        function onMouseDown(e) {
+            const mousePos = getTransformedMousePos(e);
+
+            // Check if clicking on a resize handle
+            if (selectedShape) {
+                const handle = getResizeHandleUnderMouse(selectedShape, e);
+                if (handle) {
+                    selectedShape.isResizing = true;
+                    selectedShape.resizeHandle = handle;
+                    canvas.style.cursor = getCursorForHandle(handle);
+                    return;
+                }
+            }
+
+            // Check if a shape is clicked
+            selectedShape = shapes.find(shape => isInsideShape(mousePos, shape));
+
+            if (selectedShape) {
+                // Check again for resize handles in case a shape was already selected
+                const handle = getResizeHandleUnderMouse(selectedShape, e);
+                if (handle) {
+                    selectedShape.isResizing = true;
+                    selectedShape.resizeHandle = handle;
+                    canvas.style.cursor = getCursorForHandle(handle);
+                } else {
+                    selectedShape.isDragging = true;
+                    canvas.style.cursor = 'grabbing';
+                }
+            } else {
+                // Start panning
+                isPanning = true;
+                startX = e.clientX - panOffsetX;
+                startY = e.clientY - panOffsetY;
+                canvas.style.cursor = 'grabbing';
+            }
+
+            drawCanvas();
+        }
+
+        function onMouseMove(e) {
+            if (selectedShape && selectedShape.isDragging) {
+                const mousePos = getTransformedMousePos(e);
+                // Update shape's position relative to pan
+                selectedShape.x = mousePos.x - selectedShape.width / 2;
+                selectedShape.y = mousePos.y - selectedShape.height / 2;
+                drawCanvas();
+            } else if (selectedShape && selectedShape.isResizing) {
+                resizeShape(selectedShape, e);
+                drawCanvas();
+            } else if (isPanning) {
+                panOffsetX = e.clientX - startX;
+                panOffsetY = e.clientY - startY;
+                drawCanvas();
+            } else {
+                // Update cursor style based on hover
+                updateCursorStyle(e);
+            }
+        }
+
+        function onMouseUp() {
+            if (selectedShape) {
+                selectedShape.isDragging = false;
+                selectedShape.isResizing = false;
+                selectedShape.resizeHandle = null;
+            }
+            if (isPanning) {
+                isPanning = false;
+            }
+            canvas.style.cursor = 'grab';
+        }
+
+        // Helper function to get mouse position considering pan
+        function getTransformedMousePos(e) {
+            const rect = canvas.getBoundingClientRect();
+            return {
+                x: (e.clientX - rect.left - panOffsetX) / 1, // scale is 1 for now
+                y: (e.clientY - rect.top - panOffsetY) / 1
+            };
+        }
+
+        // Helper function to check if the mouse is inside a shape
+        function isInsideShape(mousePos, shape) {
+            return mousePos.x > shape.x && mousePos.x < shape.x + shape.width &&
+                mousePos.y > shape.y && mousePos.y < shape.y + shape.height;
+        }
+
+        // Function to draw the shapes on the canvas with panning
+        function drawCanvas() {
+            ctx.save(); // Save the current state
+
+            // Clear the canvas
+            ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset transformation matrix
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Apply panning
+            ctx.translate(panOffsetX, panOffsetY);
+
+            // Draw all shapes
+            shapes.forEach(shape => {
+                ctx.fillStyle = "blue";
+                ctx.fillRect(shape.x, shape.y, shape.width, shape.height);
+
+                // If the shape is selected, draw resize handles
+                if (shape === selectedShape) {
+                    drawResizeHandles(shape);
+                }
+            });
+
+            ctx.restore(); // Restore to the original state
+        }
+
+        // Function to draw resize handles for a shape
+        function drawResizeHandles(shape) {
+            const handles = getResizeHandles(shape);
+            ctx.fillStyle = "white";
+            ctx.strokeStyle = "black";
+            handles.forEach(handle => {
+                ctx.fillRect(handle.x, handle.y, HANDLE_SIZE, HANDLE_SIZE);
+                ctx.strokeRect(handle.x, handle.y, HANDLE_SIZE, HANDLE_SIZE);
+            });
+        }
+
+        // Function to get the positions of resize handles for a shape
+        function getResizeHandles(shape) {
+            const handles = [];
+
+            // Define positions: top-left, top-right, bottom-left, bottom-right
+            handles.push({
+                x: shape.x - HANDLE_SIZE / 2,
+                y: shape.y - HANDLE_SIZE / 2,
+                cursor: 'nwse-resize',
+                position: 'nw'
+            });
+            handles.push({
+                x: shape.x + shape.width - HANDLE_SIZE / 2,
+                y: shape.y - HANDLE_SIZE / 2,
+                cursor: 'nesw-resize',
+                position: 'ne'
+            });
+            handles.push({
+                x: shape.x - HANDLE_SIZE / 2,
+                y: shape.y + shape.height - HANDLE_SIZE / 2,
+                cursor: 'nesw-resize',
+                position: 'sw'
+            });
+            handles.push({
+                x: shape.x + shape.width - HANDLE_SIZE / 2,
+                y: shape.y + shape.height - HANDLE_SIZE / 2,
+                cursor: 'nwse-resize',
+                position: 'se'
+            });
+
+            return handles;
+        }
+
+        // Function to check if mouse is over any resize handle
+        function getResizeHandleUnderMouse(shape, e) {
+            const mousePos = getTransformedMousePos(e);
+            const handles = getResizeHandles(shape);
+            return handles.find(handle =>
+                mousePos.x >= handle.x &&
+                mousePos.x <= handle.x + HANDLE_SIZE &&
+                mousePos.y >= handle.y &&
+                mousePos.y <= handle.y + HANDLE_SIZE
+            ) || null;
+        }
+
+        // Function to get cursor style based on resize handle position
+        function getCursorForHandle(handle) {
+            switch (handle.position) {
+                case 'nw':
+                case 'se':
+                    return 'nwse-resize';
+                case 'ne':
+                case 'sw':
+                    return 'nesw-resize';
+                default:
+                    return 'default';
+            }
+        }
+
+        // Function to update cursor style based on hover state
+        function updateCursorStyle(e) {
+            if (!selectedShape) {
+                // Check if hovering over any shape's resize handles
+                for (let shape of shapes) {
+                    const handle = getResizeHandleUnderMouse(shape, e);
+                    if (handle) {
+                        canvas.style.cursor = getCursorForHandle(handle);
+                        return;
+                    }
+                }
+                // Check if hovering over any shape
+                const mousePos = getTransformedMousePos(e);
+                const shape = shapes.find(s => isInsideShape(mousePos, s));
+                if (shape) {
+                    canvas.style.cursor = 'grab';
+                } else {
+                    canvas.style.cursor = 'grab';
+                }
+            } else {
+                // If a shape is selected, check if hovering over its resize handles
+                const handle = getResizeHandleUnderMouse(selectedShape, e);
+                if (handle) {
+                    canvas.style.cursor = getCursorForHandle(handle);
+                } else if (isInsideShape(getTransformedMousePos(e), selectedShape)) {
+                    canvas.style.cursor = 'grab';
+                } else {
+                    canvas.style.cursor = 'grab';
+                }
+            }
+        }
+
+        // Function to resize a shape based on mouse movement
+        function resizeShape(shape, e) {
+            const mousePos = getTransformedMousePos(e);
+            const minSize = 20; // Minimum width and height
+
+            switch (shape.resizeHandle.position) {
+                case 'nw':
+                    // Calculate new width and height
+                    const newWidthNW = shape.width + (shape.x - mousePos.x);
+                    const newHeightNW = shape.height + (shape.y - mousePos.y);
+                    if (newWidthNW >= minSize && newHeightNW >= minSize) {
+                        shape.x = mousePos.x;
+                        shape.y = mousePos.y;
+                        shape.width = newWidthNW;
+                        shape.height = newHeightNW;
+                    }
+                    break;
+                case 'ne':
+                    const newWidthNE = mousePos.x - shape.x;
+                    const newHeightNE = shape.height + (shape.y - mousePos.y);
+                    if (newWidthNE >= minSize && newHeightNE >= minSize) {
+                        shape.y = mousePos.y;
+                        shape.width = newWidthNE;
+                        shape.height = newHeightNE;
+                    }
+                    break;
+                case 'sw':
+                    const newWidthSW = shape.width + (shape.x - mousePos.x);
+                    const newHeightSW = mousePos.y - shape.y;
+                    if (newWidthSW >= minSize && newHeightSW >= minSize) {
+                        shape.x = mousePos.x;
+                        shape.width = newWidthSW;
+                        shape.height = newHeightSW;
+                    }
+                    break;
+                case 'se':
+                    const newWidthSE = mousePos.x - shape.x;
+                    const newHeightSE = mousePos.y - shape.y;
+                    if (newWidthSE >= minSize && newHeightSE >= minSize) {
+                        shape.width = newWidthSE;
+                        shape.height = newHeightSE;
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        // Initial drawing
+        drawCanvas();
+    </script>
+</body>
+
+</html>

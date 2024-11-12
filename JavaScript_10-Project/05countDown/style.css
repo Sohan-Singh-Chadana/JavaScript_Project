@@ -1,0 +1,224 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  background-color: lightpink;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.input-box {
+  background-color: rgba(0, 0, 0, 0.48);
+  width: 250px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-inline: 20px;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 2rem;
+  width: inherit;
+  text-align: center;
+  height: 150px;
+  margin-top: 18px;
+}
+
+input::placeholder {
+  color: rgba(254, 253, 255, 0.38);
+}
+
+.input-box::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(63, 24, 181);
+  padding: 12px 0;
+}
+
+.input-box:first-child::before {
+  content: "day";
+}
+
+.input-box:nth-child(2):before {
+  content: "hours";
+}
+
+.input-box:nth-child(3):before {
+  content: "minutes";
+}
+
+.input-box:nth-child(4):before {
+  content: "seconds";
+}
+
+.btn-box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+}
+
+.btn {
+  outline: none;
+  padding: 8px 1rem;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.542);
+  color: white;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.278);
+}
+
+.popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  transition: all 0.3s;
+  background-color: lightpink;
+}
+
+.popup.active {
+  height: 100vh;
+  visibility: visible;
+  overflow: unset;
+}
+
+.countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.box {
+  background-color: rgba(0, 0, 0, 0.48);
+  width: 250px;
+  height: 250px;
+  font-size: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline: 1rem;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  color: white;
+  padding-bottom: 2rem;
+}
+
+.box::before {
+  content: "sohan";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(63, 24, 181);
+  padding: 12px 0;
+}
+
+.box:first-child::before {
+  content: "Day";
+}
+
+.box:nth-child(2):before {
+  content: "Hours";
+}
+
+.box:nth-child(3):before {
+  content: "Minutes";
+}
+
+.box:nth-child(4):before {
+  content: "Seconds";
+}
+
+.timeDisplay {
+  padding: 8px;
+  background-color: white;
+  color: rgb(63, 24, 181);
+  position: absolute;
+  right: 2%;
+  top: 5%;
+  overflow: hidden;
+}
+
+.back {
+  position: absolute;
+  left: 2%;
+  top: 5%;
+}
+
+.next {
+  position: absolute;
+  right: 2%;
+  top: 5%;
+}
+
+.btn:disabled {
+  background-color: rgba(0, 0, 0, 0.182);
+  cursor: not-allowed;
+}

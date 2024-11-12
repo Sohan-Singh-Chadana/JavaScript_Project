@@ -1,0 +1,135 @@
+.left-top {
+    position: fixed;
+    top: 1rem;
+    /* left: -100%; */
+    left: 0.3rem;
+}
+
+.left-bottom {
+    position: fixed;
+    bottom: 1rem;
+    /* left: -100%; */
+    left: 0.3rem;
+}
+
+.right-top {
+    position: fixed;
+    top: 1rem;
+    /* right: -100%; */
+    right: 0.3rem;
+}
+
+.right-bottom {
+    position: fixed;
+    bottom: 1rem;
+    /* right: -100%; */
+    right: 0.3rem;
+}
+
+.left-top.active {
+    left: 0.3rem;
+}
+
+.left-bottom.active {
+    left: 0.3rem;
+}
+
+.right-bottom.active {
+    right: 0.3rem;
+}
+
+.right-top.active {
+    right: 0.3rem;
+}
+
+.toastContant {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.3rem;
+    padding: .5rem 1rem;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #96f496;
+    color: black;
+    margin: 10px;
+}
+
+.appearFromLeft {
+    animation: appearFromLeft 0.2s ease-in forwards;
+}
+
+.appearFromRight {
+    animation: appearFromRight 0.2s ease-in forwards;
+}
+
+
+/* .fade-out-left {
+    animation: fadeOutToRightreverse 0.2s ease-in forwards;
+} */
+
+@keyframes appearFromLeft {
+    0% {
+        transform: translate(-200%, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes appearFromRight {
+    0% {
+        transform: translate(200%, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.close {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.toast {
+    display: none;
+}
+
+.toastContant.success {
+    background-color: #00b300;
+}
+
+.toastContant.error {
+    background-color: #ff0000;
+}
+
+.toastContant.warning {
+    background-color: #ffa500;
+}
+
+.toastContant.info {
+    background-color: lightyellow;
+}
+
+.toastContant::before {
+    min-width: 1rem;
+    padding: 0.1em 0.5em;
+    font-weight: bold;
+    font-size: 0.85em;
+}
+
+.toastContant.success::before {
+    content: '✓';
+}
+
+.toastContant.error::before {
+    content: '✗';
+}
+
+.toastContant.warning::before {
+    content: '⚠';
+}
+
+.toastContant.info::before {
+    content: 'ⓘ';
+}

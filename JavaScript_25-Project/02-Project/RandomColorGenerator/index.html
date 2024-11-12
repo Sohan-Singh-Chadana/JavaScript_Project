@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RandomColor Genarator</title>
+    <script src="main.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    /> -->
+</head>
+
+<body>
+    <main>
+        <div class="hexColor">
+            <div class="contant">
+                <h1 id="hexColorValue"></h1>
+                <button class="btn" id="hexColorBtn">Create Hex Color</button>
+                <button class="btn" id="CopyColorValue">Copy To ClipBoard</button>
+            </div>
+        </div>
+        <div class="rgbColor">
+            <div class="contant">
+                <h1 id="rgbColorValue">rgb(107,255,92)</h1>
+                <div class="range">
+                    <label for="red">Red</label>
+                    <input type="range" name="red" id="red" min="0" max="255" value="107">
+
+                    <label for="green">Green</label>
+                    <input type="range" name="green" id="green" min="0" max="255" value="255">
+
+                    <label for="blue">Blue</label>
+                    <input type="range" name="blue" id="blue" min="0" max="255" value="92">
+                </div>
+                <!-- <button class="btn" id="rbgColorBtn">Create RGB Color</button> -->
+                <button class="btn" id="rgbColorCopyBtn">Copy To ClipBoard</button>
+            </div>
+        </div>
+    </main>
+</body>
+<!-- #1E3d38 -->
+
+</html>

@@ -1,0 +1,70 @@
+const hourEl = document.getElementById("hour");
+const minuteEl = document.getElementById("minute");
+const secondEl = document.getElementById("second");
+
+const inputHourTime = document.querySelector("#hourTime");
+const inputMinuteTime = document.querySelector("#minuteTime");
+const inputSecondTime = document.querySelector("#secondTime");
+const startTimerBtn = document.querySelector("#startTimer");
+
+const getHour = new Date().getHours();
+const getMinute = new Date().getMinutes();
+const getSec = new Date().getSeconds();
+
+const nowHour = new Date().getHours();
+const nowMinute = new Date().getMinutes();
+const nowSec = new Date().getSeconds();
+
+inputHourTime.addEventListener("input", () => {
+  const timeValue = +inputHourTime.value;
+
+  let getHours = getHour + timeValue;
+
+  const gapHourTime = getHours - nowHour;
+
+  if (gapHourTime < 10) {
+    hourEl.innerText = `0${gapHourTime}`;
+  } else {
+    hourEl.innerText = `${gapHourTime}`;
+  }
+});
+inputMinuteTime.addEventListener("input", () => {
+  let timeValue = +inputMinuteTime.value;
+
+  let getMinutes = getMinute + timeValue;
+
+  const gapMinutTime = getMinutes - nowMinute;
+
+  if (gapMinutTime < 10) {
+    minuteEl.innerText = `0${gapMinutTime}`;
+  } else {
+    minuteEl.innerText = `${gapMinutTime}`;
+  }
+});
+inputSecondTime.addEventListener("input", () => {
+  const timeValue = +inputSecondTime.value;
+
+  let getSeconds = getSec + timeValue;
+
+  const gapSecondTime = getSeconds - nowSec;
+
+  if (gapSecondTime < 10) {
+    secondEl.innerText = `0${gapSecondTime}`;
+  } else {
+    secondEl.innerText = `${gapSecondTime}`;
+  }
+});
+
+function updateTimer() {}
+
+
+
+////***********************************************
+
+  console.log(futureTime.toTimeString());
+  console.log(futureTime.toDateString());
+  console.log(futureTime.toLocaleDateString());
+  console.log(futureTime.toLocaleString());
+  console.log(futureTime.toLocaleTimeString());
+  console.log(futureTime.toISOString());
+  console.log(futureTime.toString());

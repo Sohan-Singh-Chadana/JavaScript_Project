@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito:200,300,regular,500,600,700,800,900,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #1a2725;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.hexColor {
+  background-color: #1e3d38;
+  color: white;
+  height: calc(100vh - 20px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rgbColor {
+  background-color: rgb(107, 255, 92);
+  color: white;
+  height: calc(100vh - 20px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.range {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0px;
+}
+
+.range label {
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+.range label:not(label:first-child) {
+  margin-top: 1rem;
+}
+
+.range label::after {
+  content: ":";
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 10px;
+  border: 0;
+  background-color: khaki;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 200px;
+  margin: 0 auto;
+  border: 1px solid white;
+}
+
+.rgbColor .btn {
+  background-color: crimson;
+  color: white;
+}
+
+.contant {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 50%;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  height: 10px;
+  border-radius: 50px;
+  outline: 0;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.rgbColor #red {
+  background-image: linear-gradient(90deg, #000, red);
+}
+
+.rgbColor #green {
+  background-image: linear-gradient(90deg, #000, green);
+}
+
+.rgbColor #blue {
+  background-image: linear-gradient(90deg, #000, blue);
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}

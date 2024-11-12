@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.3rem;
+  height: 100px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a0bac3;
+  letter-spacing: 1px;
+  margin-bottom: 36px;
+  color: white;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #e2f0f6;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+
+input {
+  padding: 11px 0.5rem;
+  border: 0;
+  background-color: #f6f6f6;
+  font-size: 1.2rem;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.amountLabel {
+  font-size: 1.2rem;
+}
+
+.label {
+  background-color: #d9d9d9;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  width: 80px;
+}
+
+select {
+  padding: 10px 0.4rem;
+  border: 0;
+  background-color: #f6f6f6;
+  font-size: 1.2rem;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.group {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.btn button {
+  padding: 10px 2rem;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn button:active {
+  background-color: #006fca;
+}
+
+p {
+  width: 100%;
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #282727;
+}
+
+p > span {
+  color: #06db06;
+}
+
+@media (max-width: 868px) {
+  .heading {
+    margin-bottom: 2px;
+  }
+  main {
+    height: calc(100vh - 102px);
+    border-radius: 0;
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 424px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+  .btn {
+    gap: 20px;
+    justify-content: space-between;
+  }
+}

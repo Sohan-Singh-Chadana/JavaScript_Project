@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toast Popup</title>
+    <script src="script.js" defer></script>
+    <!-- <script src="script2.js" defer></script> -->
+    <link rel="stylesheet" href="../Crete-Me/style.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading">Toast Popup</h1>
+    <main>
+        <select name="position" id="horizontal">
+            <option value="left" selected>Left</option>
+            <option value="right">Right</option>
+        </select>
+        <select name="position" id="vertical">
+            <option value="top" selected>Top</option>
+            <option value="bottom">Bottom</option>
+        </select>
+        <select name="type" id="type">
+            <option value="success" class="success" >Success</option>
+            <option value="error" class="error" >Error</option>
+            <option value="warning">Warning</option>
+            <option value="info">Info</option>
+        </select>
+
+        <input type="text" id="message" placeholder="Message" value="This is a toast message">
+
+        <input type="range" id="duration" max="10" min="3" value="5">
+
+
+        <button class="btn" type="button" id="show-toast">Show Toast</button>
+
+    </main>
+
+    <div class="left-top "></div>
+    <div class="left-bottom "></div>
+    <div class="right-top "></div>
+    <div class="right-bottom "></div>
+
+    <div class="toast">
+        <div class="contant ">
+            <div class="toastContant ">
+                <p class="message"></p>
+                <p class="close">&times;</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

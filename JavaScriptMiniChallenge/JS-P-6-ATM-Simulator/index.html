@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Simulator</title>
+    <script src="script.js" defer></script>
+    <!-- <script src="script2.js" defer></script> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="heading">ATM Simulator</h1>
+
+    <main>
+        <div class="container">
+            <form class="enterPinForm">
+                <label for="pin">Enter PIN:</label>
+                <input type="password" id="pin" placeholder="Enter your PIN (1234)" maxlength="4" autofocus/>
+                <button id="submitBtn">Submit</button><br><br>
+            </form>
+
+            <button id="checkBalaceBTn" disabled>Check Balace</button>
+            <button id="depositBtn" disabled>Deposit</button>
+            <button id="withdrawBtn" disabled>Withdraw</button><br><br>
+            <button id="loginBtn">Login</button>
+            <button id="logoutBtn">Logout</button>
+
+            <h2 class="displayMessage"></h2>
+        </div>
+    </main>
+
+
+    <div class="mode">
+        <div class="overlay">
+            <div class="popup">
+                <span>&times;</span>
+                <form class="setPinForm">
+                    <input type="password" id="setPin" placeholder="Set your PIN (1234)" maxlength="4" autofocus/>
+                    <button id="setPinBtn">Submit</button><br><br>
+                    <input type="checkbox" id="inputCheckbox">Show Password
+                </form>
+                <p class="displayLoginMessage"></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

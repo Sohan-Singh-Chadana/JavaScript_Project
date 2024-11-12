@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Poppins:wght@300;400&family=Roboto+Mono&family=Roboto:wght@400;500&family=Rubik:wght@300&family=Stylish&display=swap');
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-image: url(./back1.jpg);
+            color: white;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* background-position: right center; */
+        }
+
+        #wrapper {
+            background: linear-gradient(to right bottom, rgba(0, 0, 0, 0.606)30%, rgba(249, 249, 249, 0.5))70%, url(./sd.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: left center;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 90%;
+            margin: auto;
+            margin-top: 40px;
+            height: 100vh;
+        }
+
+        #wrapper h1 {
+            margin: 0px 0px 20px 0px;
+            font-size: 3rem;
+            /* -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: rgb(10, 10, 10); */
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: gold;
+        }
+
+        #wrapper p {
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #guess {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: gold;
+            font-family: "Lobster", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        #guessField {
+            margin: 10px;
+            padding: 5px;
+            border: 3px solid #000000;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+
+        #subt {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: 0;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .resultParas {
+            line-height: 50px;
+        }
+
+        .resultParas p {
+            font-size: 1.3rem !important;
+        }
+
+        .guesses,
+        .lastResult {
+            background-color: rgba(255, 255, 255, 0.486);
+            padding: 5px 10px;
+            margin-left: 20px;
+            color: orangered;
+            display: inline;
+            width: 50%;
+        }
+
+        #newGame {
+            background-color: rgba(255, 255, 255, 0.59);
+            font-size: 1.3rem;
+            margin: 10px auto !important;
+            width: auto;
+            padding: 8px;
+            border-radius: 10px;
+            color: orangered;
+            cursor: pointer;
+        }
+
+        .lowOrHi h2 {
+            font-size: 1.5rem;
+            letter-spacing: 2px;
+            color: orangered;
+        }
+
+        .position {
+            position: fixed;
+            top: 0%;
+            right: 0%;
+        }
+
+        .colock {
+            background-color: rgba(13, 28, 231, 0.318);
+            color: gold;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 2rem;
+            width: 200px;
+        }
+
+        .poster {
+            font-size: 1.5rem;
+            text-align: center;
+            text-transform: capitalize;
+            background-color: rgba(81, 0, 255, 0.398);
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <div id="wrapper">
+        <h1>Number Guessing Game</h1>
+        <p>Try and guess a random number between 1 and 100</p>
+        <p>You have 10 attempts to guess the right number.</p>
+        <br>
+        <form class="form">
+            <label for="guessField" id="guess">Guess a number</label>
+            <input type="text" id="guessField" class="guessField">
+            <input type="submit" id="subt" value="Submit Guess" class="guessSubmit">
+        </form>
+        <div class="resultParas">
+            <p>Previous Guesses : <span class="guesses"></span></p>
+            <p>Guesses Remaining : <span class="lastResult">10</span></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+    <div class="position">
+        <p class="poster">Your Local Time</p>
+        <p class="colock"></p>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

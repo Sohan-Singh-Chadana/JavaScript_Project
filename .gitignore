@@ -1,0 +1,7 @@
+# System files
+desktop.ini
+.DS_Store
+Thumbs.db
+
+settings.json
+.vscode

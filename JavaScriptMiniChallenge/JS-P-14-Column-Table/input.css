@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.cell {
+  @apply border border-black w-[50px] h-[50px] pl-0;
+}
