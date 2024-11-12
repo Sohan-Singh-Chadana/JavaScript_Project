@@ -81,7 +81,7 @@ https://sohan-site-2.netlify.app
 
 https://tshir-project33.netlify.app
 
-![T-shirt](/Project%20Theme%20Image/T-shirt-Design.png)
+![T-shirt](/Project%20Theme%20Image/T-Shirt-Design.png)
 
 #### 15. Simple Band Website for Practic
 
